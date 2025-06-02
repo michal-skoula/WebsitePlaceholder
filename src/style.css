@@ -1,0 +1,95 @@
+/*DM Sans*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap");
+/*DM Mono*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --default-font-family: "DM Sans", "Arial", "Adwaita", sans-serif;
+  --font-mono: "DM mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-lg leading-[150%] text-slate-200;
+  }
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4 {
+    @apply leading-[110%] text-white;
+  }
+
+  h1,
+  .h1 {
+    @apply text-5xl font-bold;
+  }
+  h2,
+  .h2 {
+    @apply text-4xl font-semibold;
+  }
+  h3,
+  .h3 {
+    @apply text-3xl font-medium;
+  }
+  h4,
+  .h4 {
+    @apply text-2xl font-medium;
+  }
+
+  small {
+    @apply text-base;
+  }
+
+  li {
+    @apply mb-0.5;
+  }
+
+  li::marker {
+    @apply text-blue-500;
+  }
+
+  ul li {
+    @apply ml-5 list-disc pl-4;
+  }
+
+  ol li {
+    @apply ml-9 list-decimal;
+  }
+
+  ol li::marker {
+    @apply font-mono font-semibold;
+  }
+
+  kbd {
+    box-shadow: 0px 5px 0px 0px var(--color-slate-600);
+    @apply cursor-default rounded-sm bg-slate-700 px-3 py-2 font-mono font-medium text-gray-300 transition-colors duration-200 ease-in-out hover:text-blue-300;
+  }
+
+  img {
+    @apply rounded-lg;
+  }
+
+  pre,
+  .astro-code {
+    @apply rounded-lg! bg-slate-950! p-4! font-mono! text-blue-200;
+  }
+
+  code {
+    @apply inline rounded-sm bg-slate-950 px-3 py-0.5 text-blue-200;
+  }
+
+  a {
+    @apply underline decoration-teal-400;
+  }
+
+  hr {
+    @apply mx-auto my-6 bg-slate-500 text-transparent;
+  }
+}
